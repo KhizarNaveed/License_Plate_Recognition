@@ -221,13 +221,14 @@ pip install -r requirements.txt
 > If running on a CPU-only machine, no extra action is required—EasyOCR and Ultralytics will automatically execute on the CPU.
 
 #### 4. Configure Local Paths & Run `Final_code/charset.py`
-At the bottom of `Final_code/charset.py` (lines 74–76), three path variables control the input image, trained model weights, and output destination:
+At the bottom of `Final_code/charset.py` (lines 74–77), dynamic portable paths automatically resolve to the project root directory across Windows, Linux, macOS, and Docker:
 
 ```python
 # --- Set Paths ---
-image_path = r"D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\double.jpeg"
-model_path = r"D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\runs\detect\train_final\weights\best.pt"
-output_dir = r"D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\cropped_output"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+image_path = os.path.join(BASE_DIR, "sample_images", "double.jpeg")
+model_path = os.path.join(BASE_DIR, "runs", "detect", "train_final", "weights", "best.pt")
+output_dir = os.path.join(BASE_DIR, "cropped_output")
 ```
 
 - **`image_path`**: Path to the vehicle image you want to test. Update this to point to any image inside `sample_images/` (for example, `sample_images/double.jpeg`, `sample_images/myCar.jpeg`, or `sample_images/box.jpeg`) or any custom image on your machine.

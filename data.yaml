@@ -1,6 +1,6 @@
-train: C:/Users/Sanani/Desktop/Six Semester/Machine learning/License Plate Recognition.v11i.yolov8/train/images
-val: C:/Users/Sanani/Desktop/Six Semester/Machine learning/License Plate Recognition.v11i.yolov8/valid/images
-test: C:/Users/Sanani/Desktop/Six Semester/Machine learning/License Plate Recognition.v11i.yolov8/test/images
+train: train/images
+val: valid/images
+test: test/images
 
 nc: 1
 names: ['License_Plate']

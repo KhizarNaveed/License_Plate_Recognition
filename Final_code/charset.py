@@ -71,9 +71,10 @@ def recognize_plates_from_image(image_path, model_path, output_dir, show_ocr_ove
         print("[!] No license plate detected.")
 
 # --- Set Paths ---
-image_path = r"D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\double.jpeg"
-model_path = r"D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\runs\detect\train_final\weights\best.pt"
-output_dir = r"D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\cropped_output"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+image_path = os.path.join(BASE_DIR, "sample_images", "double.jpeg")
+model_path = os.path.join(BASE_DIR, "runs", "detect", "train_final", "weights", "best.pt")
+output_dir = os.path.join(BASE_DIR, "cropped_output")
 
 # --- Run the Code ---
 recognize_plates_from_image(image_path, model_path, output_dir)

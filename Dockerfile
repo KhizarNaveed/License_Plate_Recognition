@@ -31,11 +31,8 @@ COPY sample_images/ ./sample_images/
 COPY runs/detect/train_final/weights/best.pt ./runs/detect/train_final/weights/best.pt
 COPY data.yaml custom_hyp.yaml ./
 
-# Create output directory and compatibility symlinks so Final_code/charset.py runs unmodified
-RUN mkdir -p /app/cropped_output && \
-    ln -s /app/sample_images/double.jpeg '/app/D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\double.jpeg' && \
-    ln -s /app/runs/detect/train_final/weights/best.pt '/app/D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\runs\detect\train_final\weights\best.pt' && \
-    ln -s /app/cropped_output '/app/D:\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\cropped_output'
+# Create output directory
+RUN mkdir -p /app/cropped_output
 
 # Run the ALPR inference pipeline by default
 CMD ["python", "Final_code/charset.py"]

@@ -3,7 +3,8 @@ import re
 import easyocr
 
 # === Configuration ===
-cropped_dir = r'C:\Users\Sanani\Desktop\Six Semester\Machine learning\License Plate Recognition.v11i.yolov8\runs\detect\cropped_plates'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+cropped_dir = os.path.join(BASE_DIR, 'runs', 'detect', 'cropped_plates')
 reader = easyocr.Reader(['en'])
 
 # === Correction rules (common OCR mistakes) ===
