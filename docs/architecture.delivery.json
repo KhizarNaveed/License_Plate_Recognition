@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "f489d761-8352-46f6-996a-7e492a863e5d",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\HP\\.gemini\\antigravity\\brain\\0324a55d-551a-40e7-8b11-d17aa8d42ebd\\scratch\\archify-candidate.json",
+  "output": "D:\\d\\Khizar\\ITU\\Semester\\Projects\\License Plate Recognition.v11i.yolov8\\docs\\architecture.html",
+  "specification": {
+    "sha256": "d339424ef2a691507b5a59c1dff5ce1aafde6c990149a59c87b129cd3799893a",
+    "bytes": 4859
+  },
+  "artifact": {
+    "sha256": "5226e7fb191837c16df35fb3e56202a4f35c847a7d65faa63c2d243c039df87e",
+    "bytes": 849265
+  }
+}

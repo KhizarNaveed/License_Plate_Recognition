@@ -1,0 +1,25 @@
+# Exclude large training/validation datasets and redundant runs from Docker build context
+train/
+valid/
+test/
+runs/detect/cropped_plates/
+runs/detect/predict_final/
+runs/detect/val/
+runs/detect/val2/
+runs/detect/val_final/
+runs/detect/train_final/*.jpg
+runs/detect/train_final/*.png
+runs/detect/train_final/*.csv
+runs/detect/train_final/weights/last.pt
+pretrained_weights/
+
+# Exclude virtual environments, git, and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.git/
+.vscode/
+.idea/
+

@@ -1,0 +1,11 @@
+services:
+  alpr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yolov8-easyocr-alpr
+    volumes:
+      - ./sample_images:/app/sample_images
+      - ./cropped_output:/app/cropped_output
+    command: ["python", "Final_code/charset.py"]
+

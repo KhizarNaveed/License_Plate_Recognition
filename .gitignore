@@ -1,0 +1,31 @@
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE & Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Raw Roboflow dataset splits (10,125 images / >500 MB) & bulk prediction dumps
+train/
+valid/
+test/
+runs/detect/cropped_plates/
+runs/detect/predict_final/
+runs/detect/train_final/weights/last.pt
+pretrained_weights/*.pt
