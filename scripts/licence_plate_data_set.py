@@ -3,7 +3,11 @@ import os
 import cv2
 import torch
 from torch.utils.data import Dataset
-from utils.charset import char2idx
+try:
+    from utils.charset import char2idx
+except ImportError:
+    CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-"
+    char2idx = {c: i + 1 for i, c in enumerate(CHARS)}
 import torchvision.transforms as transforms
 
 class LicensePlateDataset(Dataset):
